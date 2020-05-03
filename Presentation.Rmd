@@ -1,0 +1,49 @@
+---
+title: "Shiny App Assignment: ggplot2 gym"
+author: "Andrea Puggioni"
+date: "5/3/2020"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## What is it?
+
+A web app made for learning the different ggplot geom layouts
+
+## 16 graphs
+
+Spectacular visualizations with violin, jitter, smooth and many others
+
+
+```{r, warning=FALSE}
+library(ggplot2)
+g <- ggplot(mpg, aes(x=cyl, y=hwy, colour=model)) + facet_wrap(~mpg$manufacturer) + geom_violin()
+            g
+```
+
+## How it was made?
+
+With R and ggplot2 package, of course!
+
+I'll show you the code of the previous slide:
+
+```{r, warning=FALSE, echo=TRUE,eval=FALSE}
+library(ggplot2)
+g <- ggplot(mpg, aes(x=cyl, y=hwy, colour=model))
+g <- g + facet_wrap(~mpg$manufacturer)
+g <- g + geom_violin()
+     g
+```
+
+
+
+
+## The Outcomes
+
+Have a look by yourself and have fun learning R!
+
+You can see it [here](https://andreapuggioni.shinyapps.io/assignment_week_4/)
